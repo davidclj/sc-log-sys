@@ -1,0 +1,2 @@
+dubboProviderTraceFilter=cn.sccfc.dubbo.filter.DubboProviderTraceFilter
+dubboConsumerTraceFilter=cn.sccfc.dubbo.filter.DubboConsumerTraceFilter
