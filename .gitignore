@@ -134,6 +134,3 @@ Icon
 !wrapper/*.jar
 !**/wrapper/*.jar
 
-/escrow-bs-dao/src/main/generator/resources/cn/creditu/base/dao/model/mapper/
-/escrow-bs-dao/src/main/generator/java/cn/creditu/base/dao/model/mapper/
-/escrow-bs-dao/src/main/generator/java/cn/creditu/base/dao/model/
