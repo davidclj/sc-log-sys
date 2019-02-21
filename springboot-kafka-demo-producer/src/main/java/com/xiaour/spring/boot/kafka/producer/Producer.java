@@ -29,7 +29,8 @@ public class Producer {
         message.setMsg(UUID.randomUUID().toString());
         message.setSendTime(new Date());
         System.out.println(gson.toJson(message));
-        kafkaTemplate.send("test", gson.toJson(message));
+//        kafkaTemplate.send("test", gson.toJson(message));
+        kafkaTemplate.send("test","SID-001", gson.toJson(message));
     }
 
 }

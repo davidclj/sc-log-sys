@@ -23,6 +23,7 @@ public class Consumer {
 
             Object message = kafkaMessage.get();
             System.out.println("---->"+record);
+            System.out.println("---->"+record.key().toString());
             System.out.println("---->"+message);
 
         }

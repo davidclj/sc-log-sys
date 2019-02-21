@@ -25,6 +25,9 @@
         <module>consumer-provider3</module>
         <module>springboot-kafka-demo-consumer</module>
         <module>springboot-kafka-demo-producer</module>
+        <module>business-data-trans-sdk</module>
+        <module>business-data-trans-test-producer-springboot</module>
+        <module>business-data-trans-test-producer-springmvc</module>
     </modules>
 
     <properties>
