@@ -3,10 +3,12 @@ package cn.sccfc.framework.businessDataTrans.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -17,14 +19,20 @@ public class ExecutorConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(ExecutorConfig.class);
 
+    @Value("${bdt.thread.pool.corePoolSize:5}")
+    private int corePoolSize;
+
+    @Value("${bdt.thread.pool.maxPoolSize:5}")
+    private int maxPoolSize;
+
     @Bean(name = "bdtThreadPoolTaskExecutor")
     public Executor asyncServiceExecutor() {
         logger.info("start asyncServiceExecutor");
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         //配置核心线程数
-        executor.setCorePoolSize(5);
+        executor.setCorePoolSize(corePoolSize);
         //配置最大线程数
-        executor.setMaxPoolSize(5);
+        executor.setMaxPoolSize(maxPoolSize);
         //配置队列大小
         executor.setQueueCapacity(99999);
         //配置线程池中的线程的名称前缀

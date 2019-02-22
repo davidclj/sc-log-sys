@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+cn.sccfc.framework.businessDataTrans.config.ExecutorConfig,\
+cn.sccfc.framework.businessDataTrans.thread.InitThread
