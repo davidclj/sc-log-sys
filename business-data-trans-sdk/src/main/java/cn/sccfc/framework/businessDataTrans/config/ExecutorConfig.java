@@ -34,7 +34,7 @@ public class ExecutorConfig {
         //配置最大线程数
         executor.setMaxPoolSize(maxPoolSize);
         //配置队列大小
-        executor.setQueueCapacity(99999);
+        executor.setQueueCapacity(50);
         //配置线程池中的线程的名称前缀
         executor.setThreadNamePrefix("BDT-async-service-");
 

@@ -13,6 +13,7 @@ public class BusinessDataTransConsumerRunable implements Runnable {
 
     @Override
     public void run() {
+        logger.debug("BusinessDataTransConsumerRunable running");
         while (true) {
             logger.debug("BDT businessDataTransConsumerThread isAlive=true");
             BusinessDataBo data = BusinessDataTransQueue.poll();

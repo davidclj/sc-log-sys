@@ -105,7 +105,11 @@
 		<!--maven插件变量 -->
 		<tomcat.version>2.2</tomcat.version>
 		<jetty.version>7.6.14.v20131031</jetty.version>
-	</properties>
+
+        <brave.version>3.16.0</brave.version>
+        <zipkin-reporter.version>0.6.9</zipkin-reporter.version>
+
+    </properties>
 
 	<dependencies>
 
@@ -115,6 +119,43 @@
 			<artifactId>business-data-trans-sdk</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
+
+		<!-- zipKin BEGIN-->
+
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-core-spring</artifactId>
+            <version>${brave.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.reporter</groupId>
+            <artifactId>zipkin-sender-okhttp3</artifactId>
+            <version>${zipkin-reporter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.reporter</groupId>
+            <artifactId>zipkin-sender-libthrift</artifactId>
+            <version>${zipkin-reporter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.reporter</groupId>
+            <artifactId>zipkin-sender-kafka08</artifactId>
+            <version>${zipkin-reporter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-spring-web-servlet-interceptor</artifactId>
+            <version>${brave.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave-spring-resttemplate-interceptors</artifactId>
+            <version>${brave.version}</version>
+        </dependency>
+
+		<!-- zipKin END-->
+
 
 		<!-- Kafka和spring集成的支持类库，spring和kafka通信监听 -->
 		<dependency>
